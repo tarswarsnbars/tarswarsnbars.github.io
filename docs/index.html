@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TARSWARSNBARS</title>     
+  <link rel="icon" type="image/x-icon" href="T.png">
+  <style>
+  
+  
+  
+  @font-face {
+      font-family: 'vhs-gothic';
+      src: url(https://tarswarsnbars.neocities.org/pixeled-webfont.woff);
+    }
+  
+  @font-face {
+      font-family: 'vga';
+      src: url(pixeloperator-webfont.woff2);
+    }
+  
+  
+  
+  
+  
+  
+  
+  body::before {
+  font-size: 14px;
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--bg-image) no-repeat center center fixed;
+  
+
+  z-index: -1;
+  opacity: 0.3;
+  animation: fadeBg 15s ease-in-out infinite;
+}
+  body {
+  position: relative;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  margin: 0.1em;
+  font-family: 'vhs-gothic';
+  color: red;
+  text-align: center;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+
+
+
+
+
+      #slideshow {
+      position: relative;
+      
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+    }
+
+      #slideshow img {
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      top: 50%;
+      left: 50%;
+    transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+    } 
+
+
+    #slideshow img.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+
+
+
+@keyframes fadeBg {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.9;
+  }
+
+
+      
+      
+
+    }
+      
+
+    header, .footer {
+      width: 100%;
+      font-family: 'vhs-gothic';
+      color: white;
+      padding: .5em 0;
+      position: fixed;
+      align-items: center;
+      text-align: center;
+      left: 0;
+      z-index: 999;
+      
+      
+    }
+
+    header {
+      top: 0;
+    }
+
+    footer {
+      bottom: 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      padding-top: 100px;
+      padding-bottom: 80px; 
+      width: 100%;
+    }
+
+    a img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 14px;
+      margin: .1em 0;
+      font-weight: normal;
+    }
+
+    p {
+      color: white;
+      font-size:  20px;
+      font-family: 'vga';
+      margin: 0.4em 0;
+      font-weight: normal;
+      text-align: center;
+    }
+    
+    p2 {
+      padding-bottom: 80px; 
+      color: white;
+      font-size:  20px;
+      font-family: 'vga';
+      line-height: 0.8;
+      margin: 0.4em 0;
+      font-weight: normal;
+      text-align: center;
+    }
+
+  
+
+
+    .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    background-image: url("https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/redgradientbg.png"); 
+    z-index: -1; 
+    pointer-events: none; 
+  }
+  
+  
+
+
+</style>
+
+</head>
+
+<body>
+
+
+
+
+  <!-- BACKROUND Bullshit -->
+
+
+
+
+
+
+
+
+<div class="overlay"></div>
+
+
+<script>
+  const backgrounds = [
+    "https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/YN_Hell_map_simple.png",
+    "https://www.spriters-resource.com/media/assets/181/184581.png?updated=1755487525",
+    "https://www.spriters-resource.com/media/assets/181/184502.png?updated=1755487523",
+    "https://www.spriters-resource.com/media/assets/182/185080.png?updated=1755487571",
+  ];
+
+  const randomImage = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+  document.documentElement.style.setProperty(
+    "--bg-image",
+    `url("${randomImage}")`
+  );
+</script>
+
+
+  <!-- TOP HEADER -->
+  
+  <header>
+    <nav>
+      <a href="https://tarswarsnbars.neocities.org/gallery" target="_blank">ART</a>
+      <a href="https://tarswarsnbars.neocities.org/projects"  target="_blank">PROJECTS</a>
+      <a href="https://tarswarsnbars.neocities.org/photos"  target="_blank">PHOTOS</a>
+    </nav>
+  </header>
+
+
+  <!-- LOGO  -->
+
+  
+  <div class="content">
+  <div class="scroll-container">
+    <div class="scrolling-text" id="scrollingLogo">
+      <img draggable="false" src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/TARSWARSNBARSlogonewest.png" alt="TARSWARSNBARS" />
+      <img draggable="false" src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/TARSWARSNBARSlogonewest.png" alt="TARSWARSNBARS" />
+      <img draggable="false" src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/TARSWARSNBARSlogonewest.png" alt="TARSWARSNBARS" />
+    </div>
+  </div>
+
+  <script>
+    const logo = document.getElementById('scrollingLogo');
+    const clickSound = new Audio('https://github.com/tarswarsnbars/websiteassets/raw/refs/heads/main/ZJiLp-lf.wav');
+    let paused = true;
+
+    logo.addEventListener('click', () => {
+      clickSound.currentTime = 0;
+      clickSound.play().catch(() => {});
+      
+      if (Math.random() < 0.05) {
+        window.location.href = "https://tarswarsnbars.neocities.org/scarfthatgoesaroundyourneck";
+        return;
+      }
+
+      if (!paused) {
+        logo.style.animationPlayState = 'paused';
+        paused = true;
+      } else {
+        logo.style.animationPlayState = 'running';
+        paused = false;
+      }
+    });
+  </script>
+
+  <style>
+    .scroll-container {
+      overflow: hidden;
+      width: 100%;
+      height: 155px;
+      display: flex;
+      justify-content: center; /* Initial center alignment */
+      align-items: center;
+      background: transparent;
+    }
+
+    .scrolling-text {
+
+      -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+          
+            -webkit-user-select: none; 
+            -ms-user-select: none;     
+            user-select: none;
+      display: flex;
+      flex-direction: row;
+      will-change: transform;
+      
+      
+      animation: centerToLoop 8s linear infinite;
+      
+      animation-play-state: paused;
+    }
+
+    .scrolling-text img {
+      
+      padding: 0 35vw; /* Adjust spacing between logos */
+    }
+
+    @keyframes centerToLoop {
+      0% {
+        /* Starts exactly where flexbox placed it (the center) */
+        transform: translateX(0);
+      }
+      100% {
+        /* Moves left by exactly the width of one logo + its padding */
+        /* This creates the seamless hand-off */
+        transform: translateX(-33.333%);
+      }
+    }
+  </style>
+  
+  <h1><div id="randomText"></div></h1>
+      <script>
+       const messages = [
+          "Red.",
+          "Remember it.",
+          "Find it in places it isn’t at.",
+          "My Blas",
+          "i think my website is haunted",
+          "get that thang outta your mouth",
+          "You!",
+          "Perdition",
+          "All Strings Attached",
+          "frozenriceguy985",
+          "Media Pending",
+          "1987 Buick Grand National",
+          "1989 Nissan R32 GT-R",
+          "Don't come back.",
+          "I miss the quiet.",
+          "and i am the cowboy on my own trip and i am the cowboy on my own trip and i am the cowboy on my own trip and i am the cowboy on my own trip and i am the cowboy",
+          "G",
+          
+       ];
+        const randomIndex = Math.floor(Math.random() * messages.length);
+        const randomMessage = messages[randomIndex];
+  
+        document.getElementById("randomText").innerHTML = `${randomMessage}`;
+      </script>
+  
+  </div>
+    
+    
+    
+  <!-- MAIN -->  
+    
+    
+   
+
+  
+    
+  <div> 
+    <p>hello. i go by targato and this is where i store all my fat trash. feel free to look around. thank you. </p>  
+  </div>
+  
+    
+  <div>   
+     
+    <p> fishandrobot 菲律宾裔美国人混血。人工智能软件工程师。</p>
+    
+    <p> 在线销售额达 5000 万美元。已向合作伙伴和联盟会员支付 5000 万美元。 </p>
+    
+    <p> 拥有遍布 150 个国家/地区的 25 万多名客户。理财有道，尽享美好生活。</p>
+    
+  </div>
+  
+
+    <p></p>
+  
+     
+
+  <div class="date">
+  
+      <span style="color: white;">LAST UPDATED 1/24/2026</span>
+  </div>
+    
+  
+  <div id="slideshow">
+    <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/stills/theonewithnoname.png" class="active">
+    <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/stills/butchervanitystill.png">
+    <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/stills/sinsitermindstill.png">
+    <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/stills/mfdoommadotsuki.png">
+    <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/stills/idontknowstill.png">
+    <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/stills/namelessfartstill.png">
+    <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/stills/dreamcastill.png">
+    <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/stills/cassandrastill.png">
+    <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/stills/fruitsstill.png">
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('#slideshow img');
+    const slideshow = document.getElementById('slideshow');
+    let current = 0;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+
+      // Resize the container to match the active image
+      const activeImage = images[index];
+      slideshow.style.width = activeImage.naturalWidth + 'px';
+      slideshow.style.height = activeImage.naturalHeight + 'px';
+    }
+
+    // Wait for all images to load before starting
+    let loaded = 0;
+    images.forEach(img => {
+      img.onload = () => {
+        loaded++;
+        if (loaded === images.length) {
+          showImage(current); // show first image with correct size
+          setInterval(() => {
+            current = (current + 1) % images.length;
+            showImage(current);
+          }, 10000);
+        }
+      };
+    });
+  </script>
+
+  <p></p>
+  <p></p>
+  <p></p>
+  
+ 
+  
+  <a href="https://tarswarsnbars.neocities.org">
+      <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/TARSWARSNBARSbutton.png"/>
+    </a>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <!-- BOTTOM FOOTER -->
+  <footer>
+      <img src="https://adriansblinkiecollection.neocities.org/x8.gif" style="width:150px; height:20px"/> 
+     <img src="https://adriansblinkiecollection.neocities.org/y32.gif" style="width:150px; height:20px"/> 
+     <img src="https://adriansblinkiecollection.neocities.org/a31.gif" style="width:150px; height:20px"/>  
+      <img src="https://i.postimg.cc/tg8MThNn/aeef5624.gif" style="width:150px; height:20px"/>
+    
+      <a href="https://tarswarsnbars.neocities.org/red">
+      <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/shadeofpurple.gif"/>
+    </a>
+    
+    <img src="https://raw.githubusercontent.com/tarswarsnbars/websiteassets/refs/heads/main/blinke.gif" style="width:150px; height:20px"/>
+    <img src="https://i.postimg.cc/63GFLHph/a2ab3737.gif" style="width:150px; height:20px"/>
+    <img src="https://i.postimg.cc/631FCkKq/9abd604f.gif" style="width:150px; height:20px"/>
+    <img src="https://i.postimg.cc/k4PjQ76T/tumblr-inline-pbix8g9c-Xs1tehlgd-500.gif" style="width:150px; height:20px"/>
+    <img src="https://i.postimg.cc/1tyGRXN1/dc5ad13b.gif" style="width:150px; height:20px"/>
+  </footer>
+  
+
+</body>
+</html>
+
+
